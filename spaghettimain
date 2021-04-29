@@ -1,0 +1,26 @@
+using System;
+using System.IO;
+namespace myApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello!");
+            Console.WriteLine("The current time is " + DateTime.Now);
+            Console.Write("Enter username: ");
+            string s = "Bruh";
+            s=s.PadRight(30);
+            string userName = Console.ReadLine();
+            if (userName = "spaghetti")
+            {
+                Console.WriteLine("spaghetti weak, arms spaghetti, there's spaghetti on his spaghetti already, spaghetti spaghetti");
+            }  
+            else
+            {
+                Console.WriteLine("Hello, " + userName + "!");
+            }
+
+        }
+    }
+}
