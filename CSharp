@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 namespace myApp
 {
     class Program
@@ -23,7 +24,25 @@ namespace myApp
                 Console.WriteLine(" ");
                 Console.WriteLine("Hello, " + userName + "!"); 
             }
-
+            var functionRequests = new List<string>();
+            functionRequests.Add("calculator");
+            functionRequests.Add("Calculator");
+            functionRequests.Add("help");
+            functionRequests.Add("Help");
+            Console.WriteLine($"What do you need, {userName}?");
+            string functionReq = Console.ReadLine();
+            Console.WriteLine(" ");
+            if (functionRequests.Contains(functionReq))
+            {
+                Console.WriteLine($"Selected function: {functionReq}");
+                // Console.WriteLine(" ");
+                string calcInput = Console.ReadLine();
+                Console.WriteLine(calcInput);
+            }
+            else
+            {
+                Console.WriteLine($"Unknown function '{functionReq}'");
+            }
         }
     }
 }
